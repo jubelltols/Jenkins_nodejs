@@ -7,11 +7,11 @@ pipeline {
             steps {
                 script {
                     sh "npm install"
-                    sh "eslint -c .eslintrc.json --ext .js"
+                    /* sh "eslint -c .eslintrc.json --ext .js" */
                 }
             }
         }
-        stage('test') {
+        /* stage('test') {
             steps {
                 script {
                     sh "npm install"
@@ -26,6 +26,6 @@ pipeline {
                     sh "npm run serve"
                 }
             }
-        }
+        } */
     }
 }
