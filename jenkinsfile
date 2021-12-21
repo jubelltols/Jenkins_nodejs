@@ -1,17 +1,17 @@
 pipeline {
     agent {
-        docker { image 'node:17.3.12-alpine' }
+        docker { image 'node:16.13.1-alpine' }
     }
     stages {
         stage('linter') {
             steps {
                 script {
                     sh "npm install"
-                    /* sh "eslint -c .eslintrc.json --ext .js" */
+                    sh "eslint -c .eslintrc.json --ext .js"
                 }
             }
         }
-        /* stage('test') {
+        stage('test') {
             steps {
                 script {
                     sh "npm install"
@@ -26,6 +26,7 @@ pipeline {
                     sh "npm run serve"
                 }
             }
-        } */
+        }
     }
 }
+
