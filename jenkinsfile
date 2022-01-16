@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     sh "npm install eslint"
-                    /* sh "eslint -c .eslintrc.json --ext .js" */
+                    sh "eslint -c .eslintrc.json --ext .js"
                 }
             }
         }
